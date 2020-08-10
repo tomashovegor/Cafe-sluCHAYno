@@ -1,0 +1,84 @@
+﻿@model sluCHAYno.ViewModels.HomeVm
+
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="header-content">
+    <div class="row">
+        <div class="col-12 col-xl-7">
+            <img class="header-content-img img-fluid" src="img/header/image 1.png" alt="">
+        </div>
+        <div class="col-12 col-xl-5">
+            <h2>слуЧАЙно</h2>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aperiam porro tenetur beatae asperiores eaque magnam numquam distinctio quidem itaque, eius facere, dolorem eum vitae, consequatur unde modi vel sequi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cafe-menu" id="cafe-menu">
+    <h2>Меню</h2>
+    <div class="row">
+        <div class="col">
+            <h3>@Html.ActionLink(@Model.MenuCategories.FirstOrDefault(x => x.Id == 1).Name, "Index", "MenuCategory", new { id = 1 }, null)</h3>
+            <ul>
+                @foreach (var item in Model.MenuItems.Where(x => x.CategoryId == 1))
+                {
+                    <li>
+                        @Html.ActionLink(item.Name, "Index", "MenuItem", new { id = item.Id }, null)
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col">
+            <h3>@Html.ActionLink(@Model.MenuCategories.FirstOrDefault(x => x.Id == 2).Name, "Index", "MenuCategory", new { id = 2 }, null)</h3>
+            <ul>
+                @foreach (var item in Model.MenuItems.Where(x => x.CategoryId == 2))
+                {
+                    <li>
+                        @Html.ActionLink(item.Name, "Index", "MenuItem", new { id = item.Id }, null)
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col">
+            <h3>@Html.ActionLink(@Model.MenuCategories.FirstOrDefault(x => x.Id == 3).Name, "Index", "MenuCategory", new { id = 3 }, null)</h3>
+            <ul>
+                <li><a href="">Завтраки</a></li>
+                <li><a href="">Выпечка</a></li>
+                <li><a href="">Салаты</a></li>
+                <li><a href="">Десерты</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="about" id="about">
+    <h2>О нас</h2>
+    <div class="row">
+        <div class="col-12 col-xl-5">
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium in unde necessitatibus neque soluta dicta velit impedit corrupti repellendus, quibusdam eaque dignissimos. Doloremque odit ipsam minima earum, illo, quae non?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium in unde necessitatibus neque soluta dicta velit impedit corrupti repellendus, quibusdam eaque dignissimos. Doloremque odit ipsam minima earum, illo, quae non?</p>
+            </div>
+        </div>
+        <div class="col-12 col-xl-7">
+            <img class="about-img img-fluid" src="img/image 2.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="contacts" id="contacts">
+    <h2>Контакты</h2>
+    <div class="row">
+        <div class="mb-5 col-lg-6">
+            <img class="contacts-img img-fluid" src="img/image 3.png" alt="">
+        </div>
+        <div class="col-lg-6">
+            <ul>
+                <li>Адрес: г. Екатеринбург, ул. 8 марта, д. 64</li>
+                <li><a href="">Телефон: +7 (922) 456 45-45</a></li>
+                <li><a href="">E-mail: sluchayno@yandex.ru</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

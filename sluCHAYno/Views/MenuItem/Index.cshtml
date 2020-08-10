@@ -1,0 +1,36 @@
+﻿@model sluCHAYno.ViewModels.MenuItemVm
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<div class="row">
+
+    <div class="col-md-6">
+        <img src="~/img/@Model.ImageName" alt="@Model.ImageName" />
+    </div>
+    <div class="col-md-6">
+        @if (Model.CategoryId == 2)
+        {
+            <h3>@Model.Name чай</h3>
+        }
+        else
+        {
+            <h3>@Model.Name</h3>
+        }
+        <p>
+            @Model.Description
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                Min:
+                @Model.MinPrice
+            </div>
+            <div class="col-md-6">
+                Max:
+                @Model.MaxPrice
+            </div>
+        </div>
+    </div>
+
+</div>
