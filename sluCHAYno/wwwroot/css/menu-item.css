@@ -1,0 +1,11 @@
+﻿.menu-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-item-content {
+    padding: 40px;
+}
+h3:hover:before {
+    height: 0;
+}

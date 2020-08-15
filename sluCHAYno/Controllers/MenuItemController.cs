@@ -26,6 +26,7 @@ namespace sluCHAYno.Controllers
                 MaxPrice = x.MaxPrice,
                 MinPrice = x.MinPrice,
                 ImageName = x.ImageName,
+                CategoryName = _repository.MenuCategories.Where(category => category.Id == x.CategoryId).FirstOrDefault().Name,
                 CategoryId = x.CategoryId
             }).FirstOrDefault();
 

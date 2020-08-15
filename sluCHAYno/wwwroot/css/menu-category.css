@@ -1,0 +1,39 @@
+﻿.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+    margin: 50px;
+}
+
+    .card:hover {
+        border-color: #ff4364;
+    }
+
+    .card h3 {
+        align-self: center;
+        margin: auto;
+    }
+
+        .card h3:hover:before {
+            position: absolute;
+            content: '';
+            height: 0px;
+        }
+
+h2:before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #ff4364;
+    bottom: 0px;
+}
+.block {
+    padding-top: 0;
+}

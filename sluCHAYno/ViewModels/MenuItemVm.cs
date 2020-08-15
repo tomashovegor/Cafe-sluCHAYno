@@ -17,6 +17,8 @@ namespace sluCHAYno.ViewModels
 
         public int MinPrice { get; set; }
 
+        public string CategoryName { get; set; }
+
         public int CategoryId { get; set; }
     }
 }

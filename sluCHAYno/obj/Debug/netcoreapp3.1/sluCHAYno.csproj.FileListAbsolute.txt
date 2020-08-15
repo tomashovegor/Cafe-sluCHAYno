@@ -9,7 +9,6 @@ C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\bin\Debug\netcoreapp3.1\sluCH
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\bin\Debug\netcoreapp3.1\sluCHAYno.pdb
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\bin\Debug\netcoreapp3.1\sluCHAYno.Views.dll
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\bin\Debug\netcoreapp3.1\sluCHAYno.Views.pdb
-C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.csprojAssemblyReference.cache
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.AssemblyInfoInputs.cache
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.AssemblyInfo.cs
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.RazorAssemblyInfo.cache
@@ -70,3 +69,4 @@ C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\bin\Debug\netcoreapp3.1\Micro
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.csproj.CoreCompileInputs.cache
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\Razor\Views\MenuCategory\_partialMenuItem.cshtml.g.cs
+C:\Users\Егор\source\repos\sluCHAYno\sluCHAYno\obj\Debug\netcoreapp3.1\sluCHAYno.csprojAssemblyReference.cache

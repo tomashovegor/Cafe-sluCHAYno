@@ -1,14 +1,26 @@
 ﻿@model sluCHAYno.ViewModels.MenuCategoryVm
 
-@{ 
+@{
     ViewData["Title"] = Model.Name;
 }
+@section Style {
+    <link rel="stylesheet" href="~/css/my-breadcrumb.css" />
+    <link rel="stylesheet" href="~/css/menu-category.css" />
+}
+<div class="my-breadcrumb breadcrumb">
+    <a asp-controller="Home" asp-action="Index">
+        Главная
+    </a>
+    \
+    <span class="breadcrumb-active">@Model.Name</span>
+</div>
+<div class="block">
+    <span class="h-wrapper"><h2>@Model.Name</h2></span>
 
-    <h2>@Model.Name</h2>
-    
-    <ul class="card-list">
-        @foreach (var item in Model.menuItems)
-        {
-            @await Html.PartialAsync("_partialMenuItem", item)
-        }
-    </ul>
+        <ul class="card-list">
+            @foreach (var item in Model.menuItems)
+            {
+                @await Html.PartialAsync("_partialMenuItem", item)
+            }
+        </ul>
+</div>

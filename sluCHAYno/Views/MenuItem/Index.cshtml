@@ -3,34 +3,57 @@
 @{
     ViewData["Title"] = @Model.Name;
 }
+@section Style {
+    <link rel="stylesheet" href="~/css/my-breadcrumb.css" />
+    <link rel="stylesheet" href="~/css/menu-item.css" />
+}
+<div class="my-breadcrumb breadcrumb">
+    <a asp-controller="Home" asp-action="Index">
+        Главная
+    </a>
+    \
+    <a asp-controller="MenuCategory" asp-action="Index" asp-route-id="@Model.CategoryId">
+        @Model.CategoryName
+    </a>
+    \
+    @if (Model.CategoryId == 2)
+    {
+        <span class="breadcrumb-active">@Model.Name чай</span>
+    }
+    else
+    {
+        <span class="breadcrumb-active">@Model.Name</span>
+    }
+</div>
+<div class="block">
+    <div class="row">
 
-<div class="row">
-
-    <div class="col-md-6">
-        <img src="~/img/@Model.ImageName" alt="@Model.ImageName" />
-    </div>
-    <div class="col-md-6">
-        @if (Model.CategoryId == 2)
-        {
-            <h3>@Model.Name чай</h3>
-        }
-        else
-        {
-            <h3>@Model.Name</h3>
-        }
-        <p>
-            @Model.Description
-        </p>
-        <div class="row">
-            <div class="col-md-6">
-                Min:
-                @Model.MinPrice
-            </div>
-            <div class="col-md-6">
-                Max:
-                @Model.MaxPrice
+        <div class="col-md-6 menu-item-img">
+            <img class="img-fluid" src="~/img/@Model.ImageName" alt="@Model.ImageName" height="500" width="600" />
+        </div>
+        <div class="col-md-6 menu-item-content">
+            @if (Model.CategoryId == 2)
+            {
+                <h3>@Model.Name чай</h3>
+            }
+            else
+            {
+                <h3>@Model.Name</h3>
+            }
+            <p>
+                @Model.Description
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    Min:
+                    @Model.MinPrice
+                </div>
+                <div class="col-md-6">
+                    Max:
+                    @Model.MaxPrice
+                </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>

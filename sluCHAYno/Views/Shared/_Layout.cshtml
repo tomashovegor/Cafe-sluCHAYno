@@ -10,7 +10,8 @@
     <title>@ViewData["Title"] - слуЧАЙно</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    @RenderSection("Style", required: false)
 </head>
 <body>
     <div class="wrapper">
@@ -18,16 +19,12 @@
         <header class="header">
             <div class="container">
                 <div class="menu">
-                    <span class="logo">
-                        слуЧАЙно
-                        <div class="sqrt"></div>
-                    </span>
-                    <nav class="nav" id="nav">
-                        <a href="#">@Html.ActionLink("Главная", "Index", "Home")</a>
-                        <a href="#cafe-menu">Меню</a>
-                        <a href="#about">О нас</a>
-                        <a href="#contacts">Контакты</a>
-                    </nav>
+                    <a asp-controller="Home" asp-action="Index">
+                        <span class="logo">
+                            слуЧАЙно
+                            <div class="sqrt"></div>
+                        </span>
+                    </a>
                 </div>
             </div>
         </header>
@@ -57,18 +54,18 @@
                     <div class="col-12 col-md">
                         <ul>
                             <li>Адрес: г. Екатеринбург, ул. 8 марта, д. 64</li>
-                            <li>Телефон: +7 (922) 456 45-45</li>
-                            <li>E-mail: sluchayno@yandex.ru</li>
+                            <li><a href="">Телефон: +7 (922) 456 45-45</a></li>
+                            <li><a href="">E-mail: sluchayno@yandex.ru</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript" src="~/js/nav.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
